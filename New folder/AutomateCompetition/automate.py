@@ -24,16 +24,16 @@ pt.speak("How may I help you ?")
 
 while(True):
     x = input("What do you want : ")
-    
+
     if(("run" in x or "open" in x) and ("notepad" in x or "editor" in x)):
         os.system("notepad")
-        
+
     elif(("run" in x or "open" in x) and ("calculator" in x or "calc" in x)):
         os.system("calc")
-        
+
     elif(("run" in x or "open" in x) and ("camera" in x)):
         os.system("start microsoft.windows.camera:")
-        
+
     elif("send" in x and "mail" in x):
         #The mail addresses and password
         sender_address = input("Enter your mail: ")
@@ -55,66 +55,66 @@ while(True):
         session.sendmail(sender_address, receiver_address, text)
         session.quit()
         pt.speak('Mail Sent')
-        
-        
+
+
     elif("open" in x and ("youtube" in x or "utube" in x)):
         os.system("chrome youtube.com")
-        
-        
+
+
     elif("open" in x and ("songs" in x or "music" in x)):
         os.system("chrome gaana.com")
-        
-        
+
+
     elif(("open" in x or "run" in x) and ("store" in x or "microsoft store" in x)):
         os.system("start ms-windows-store:")
-        
-        
+
+
     elif(("open" in x or "run" in x or "execute" in x) and ("vscode" in x or "code" in x)):
         os.system("code")
-        
-        
+
+
     elif("open" in x and ("facebook" in x or "fb" in x)):
         os.system("chrome facebook.com")
-        
-        
+
+
     elif("time" in x and "what" in x ):
         os.system("time")
-        
-        
+
+
     elif("go to" in x):
         dir = input("Enter directory : ")
         os.system("cd "+dir)
-        
-        
+
+
     elif("shutdown" in x or "close pc" in x or "turn off" in x):
         os.system("shutdown/i")
-        
-        
+
+
     elif("open" in x and "bash" in x):
         os.system("bash")
-        
-        
+
+
     elif("open" in x and "netflix" in x):
         os.system("chrome netflix.com")
-        
-        
+
+
     elif(("do" in x or "go to" in x) and ("shopping" in x or "shop" in x)):
         os.system("chrome amazon.in")
-        
-        
+
+
     elif("open" in x and "whatsapp"):
         os.system("chrome web.whatsapp.com")
-        
-        
+
+
     elif(("watch" in x or "play" in x) and ("star wars" in x)):
         os.system("telnet towel.blinkenlights.nl")
 
     elif(("send" in x) or ("msg" in x)) and (("whatsapp" in x) or ("WhatsApp" in x) or("whatsApp" in x)):
     	print("To use this feature first install pywhatkit as : pip install pywhatkit")
     	print("If installed Kindly ignore...")
-    	print("\n")
+    	print("\n\n\n")
     	print("Enter the number to which you want to send message incuding country code  (e.g. +919876543210) : ", end = '')
-    	num = input()	
+    	num = input()
     	print("Enter the message : ", end = '')
     	msg = input()
     	print("Enter hours in 24 hrs format at which the message has to be delivered : " , end = '')
@@ -122,7 +122,7 @@ while(True):
     	print("Enter mins format at which the message has to be delivered : " , end = '')
     	min = input()
     	pywhatkit.sendwhatmsg(num,msg,int(hr),int(min))
-        
+
     elif(("start" in x or "open" in x) and ("timer" in x or "watch in x")):
         print("Enter time in seconds: " , end = '')
         sec = input()
@@ -134,7 +134,7 @@ while(True):
           time.sleep(1)
           t=t-1
         pt.speak("Time Over")
-        
+
     elif ((("play" in x)  or ("start" in x )) and ("quiz" in x)):
         print("\n\n\n")
         print("****Welcome to my Quiz game****")
@@ -152,19 +152,19 @@ while(True):
         print()
         print("Press 0 or type exit to quit the game")
         print()
-        
+
         start_game = input()
-        if (start_game == "exit" ) or (start_game == "0") or (start_game == "quit") : 
+        if (start_game == "exit" ) or (start_game == "0") or (start_game == "quit") :
           os.system("exit()")
-        else : 
-            
-        
+        else :
+
+
           print("1. C")
           print("2. C++")
           print("3. Python")
           print("4. Java")
           choice = input()
-          if choice == "1" : 
+          if choice == "1" :
             total =0
             q = 1
             os.system("cls")
@@ -177,11 +177,12 @@ while(True):
             ans = input()
             if ans == "B" or ans == "b" :
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+                print("Correct Answer..!!")
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
-        
+
             os.system("cls")
             print("Question 2 :" , end = '')
             print("\tThe library function strrchr() finds the first occurrence of a substring in another string.")
@@ -192,7 +193,8 @@ while(True):
             ans = input()
             if ans == "B" or ans == "b" :
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+                print("Correct Answer..!!")
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -205,8 +207,9 @@ while(True):
             print("D - Local variables")
             ans = input()
             if ans == "C" or ans == "c" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -219,8 +222,9 @@ while(True):
             print("D - The maximum number of arguments a function can take is 128")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -233,18 +237,18 @@ while(True):
             print("D - stderr.h")
             ans = input()
             if ans == "C" or ans == "c" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
             print("Total Marks:" , end = '')
             print(total)
-            
-        
-          elif choice == "2" : 
+
+
+          elif choice == "2" :
             total =0
-            q = 1
             os.system("cls")
             print("Question 1 :" , end = '')
             print("\tChoose the operator which cannot be overloaded.")
@@ -254,8 +258,9 @@ while(True):
             print("D - %")
             ans = input()
             if ans == "C" or ans == "c" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -268,8 +273,9 @@ while(True):
             print("D - namespace")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -282,8 +288,9 @@ while(True):
             print("D - None of the above")
             ans = input()
             if ans == "A" or ans == "a" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -294,8 +301,9 @@ while(True):
             print("B - False")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -308,15 +316,16 @@ while(True):
             print("D - out.a")
             ans = input()
             if ans == "C" or ans == "c" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
             print("Total Marks:" , end = '')
             print(total)
-        
-          elif choice == "3" : 
+
+          elif choice == "3" :
             total =0
             q = 1
             os.system("cls")
@@ -328,8 +337,9 @@ while(True):
             print("D - %")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -342,8 +352,9 @@ while(True):
             print("D - none of the above")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -356,8 +367,9 @@ while(True):
             print("D - Graphics")
             ans = input()
             if ans == "A" or ans == "a" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -368,8 +380,9 @@ while(True):
             print("B - Window.mainloop()")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -382,15 +395,16 @@ while(True):
             print("D - No such option in python.")
             ans = input()
             if ans == "C" or ans == "c" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
             print("Total Marks:" , end = '')
             print(total)
-        
-          elif choice == "4" : 
+
+          elif choice == "4" :
             total =0
             q = 1
             os.system("cls")
@@ -400,8 +414,9 @@ while(True):
             print("B - False")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -414,8 +429,9 @@ while(True):
             print("D - not defined")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -428,8 +444,9 @@ while(True):
             print("D - not defined")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -440,8 +457,9 @@ while(True):
             print("B - False")
             ans = input()
             if ans == "A" or ans == "a" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") :
                 os.system("exit()")
             else :
                 print("Wrong answer")
@@ -454,18 +472,19 @@ while(True):
             print("D - not precisely defined")
             ans = input()
             if ans == "B" or ans == "b" :
+                print("Correct Answer..!!")
                 total=total+1
-            if (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
+            elif (ans == "exit" ) or (ans == "0") or (ans == "quit") : 
                 os.system("exit()")
             else :
                 print("Wrong answer")
             print("Total Marks:" , end = '')
             print(total)
-        
-          else : 
+
+          else :
               print("Choice not recognised")
 
-        
+
     elif(("play" in x) and ("game" in x)):
           t = ["rock","paper","scissors"]
           player = False
