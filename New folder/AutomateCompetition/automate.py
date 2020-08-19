@@ -14,6 +14,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 import sys
+import pywhatkit
+
 
 
 pt.speak("Welcome "+os.getenv('username'))
@@ -106,6 +108,20 @@ while(True):
         
     elif(("watch" in x or "play" in x) and ("star wars" in x)):
         os.system("telnet towel.blinkenlights.nl")
+
+    elif(("send" in x) or ("msg" in x)) and (("whatsapp" in x) or ("WhatsApp" in x) or("whatsApp" in x)):
+    	print("To use this feature first install pywhatkit as : pip install pywhatkit")
+    	print("If installed Kindly ignore...")
+    	print("\n")
+    	print("Enter the number to which you want to send message incuding country code  (e.g. +919876543210) : ", end = '')
+    	num = input()	
+    	print("Enter the message : ", end = '')
+    	msg = input()
+    	print("Enter hours in 24 hrs format at which the message has to be delivered : " , end = '')
+    	hr = input()
+    	print("Enter mins format at which the message has to be delivered : " , end = '')
+    	min = input()
+    	pywhatkit.sendwhatmsg(num,msg,int(hr),int(min))
         
     elif(("start" in x or "open" in x) and ("timer" in x or "watch in x")):
         print("Enter time in seconds: " , end = '')
